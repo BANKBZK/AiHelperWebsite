@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="th"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AiHelperWebsite เครื่องมือเรียนรู้การสร้าง Prompt, Character และ Scene">
+  <title>AiHelperWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="เมนูหลัก">
+    <a class="site-brand" href="index.html"><span>AI</span> AiHelperWebsite</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="เปิดเมนู">☰</button>
+    <div class="nav-links">
+      <a class="active" href="index.html" aria-current="page">Home</a>
+      <a href="prompt-builder.html">Prompt Builder</a>
+      <a href="character-builder.html">Character Builder</a>
+      <a href="scene-builder.html">Scene Builder</a>
+    </div>
+  </nav>
+  <main class="lab-shell home-page">
+    <section class="home-hero">
+      <div>
+        <p class="eyebrow">PLAYER SELECT · CREATIVE QUEST</p>
+        <h1>AiHelper<br><span>Website</span></h1>
+        <h2>เรียนรู้ • ทดลอง • สร้างงาน AI แบบเป็นขั้นตอน</h2>
+        <p>รวมเครื่องมือช่วยสร้าง Prompt, Character, Scene และ Unity C# Prompt สำหรับ Unity 6000.5.4f1</p>
+        <div class="hero-actions"><a class="lab-button primary" href="prompt-builder.html">PRESS START · Prompt <span>→</span></a><a class="lab-button secondary" href="#tools">เลือกภารกิจ ↓</a></div>
+        <a class="trouble-home-cta" href="https://www.facebook.com/people/SyntaxErr0r/61594200537782/" target="_blank" rel="noopener noreferrer"><img src="assets/syntaxerr0r-logo.png" alt="SyntaxErr0r"><div><small>ติดตามผลงานและอัปเดตจาก BANKBZK</small><strong>SyntaxErr0r</strong></div><b>เปิดเพจ →</b></a>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><span class="orb orb-a">✨</span><span class="orb orb-b">👤</span><span class="orb orb-c">🎮</span><strong>SELECT<br>QUEST</strong></div>
+    </section>
+
+    <section id="tools" class="home-section">
+      <p class="eyebrow">CHOOSE YOUR QUEST</p><h2>เครื่องมือในคลาส</h2><p class="section-lead">เลือกเครื่องมือที่ต้องการ แล้วเริ่มสร้างงานของคุณ</p>
+      <div class="tool-grid">
+        <article class="tool-card"><div class="tool-icon">✨</div><span class="tool-number">01</span><h3>Prompt Builder</h3><p>สร้าง Prompt แบบเป็นขั้นตอน ตั้งแต่แนวคิดจนได้ Final Prompt พร้อมใช้งาน</p><span class="status-pill">● พร้อมใช้งาน</span><a href="prompt-builder.html">เปิด Prompt Builder →</a></article>
+        <article class="tool-card"><div class="tool-icon">👤</div><span class="tool-number">02</span><h3>Character Builder</h3><p>ออกแบบตัวละครอย่างละเอียด เพื่อสร้าง Character Prompt และนำกลับไปใช้ซ้ำได้</p><a href="character-builder.html">สร้าง Character →</a></article>
+        <article class="tool-card"><div class="tool-icon">🏞️</div><span class="tool-number">03</span><h3>Scene Builder</h3><p>ออกแบบสถานที่ บรรยากาศ แสง และองค์ประกอบของฉาก ก่อนนำไปสร้างภาพ</p><a href="scene-builder.html">สร้าง Scene →</a></article>
+        <article class="tool-card"><div class="tool-icon">📚</div><span class="tool-number">04</span><h3>Prompt Library</h3><p>รวม Prompt Template พร้อมภาพตัวอย่างและแหล่งข้อมูล สำหรับคัดลอกไปใช้งานได้ทันที</p><a href="prompt-library.html">เปิดคลัง Prompt →</a></article>
+        <article class="tool-card"><div class="tool-icon">🎮</div><span class="tool-number">05</span><h3>Unity AI Helper</h3><p>ขยายไอเดียสั้นๆ เป็น Prompt โครงสร้าง Role / Context / Technical / Output สำหรับเขียน C# ใน Unity 6000.5.4f1</p><span class="status-pill">● Unity 6</span><a href="unity-builder.html">เปิด Unity AI Helper →</a></article>
+      </div>
+    </section>
+
+    <section class="home-section flow-section">
+      <div><p class="eyebrow">LEARNING FLOW</p><h2>สร้าง Prompt อย่างเป็นระบบ</h2><p class="section-lead">แยกความคิดทีละส่วน แล้วนำมารวมเป็นภาพที่ชัดเจน</p></div>
+      <div class="learning-flow">
+        <article><span>👤</span><small>CHARACTER</small><strong>ใครอยู่ในภาพ?</strong></article><b>→</b>
+        <article><span>🏞️</span><small>SCENE</small><strong>ตัวละครอยู่ที่ไหน?</strong></article><b>→</b>
+        <article><span>✨</span><small>PROMPT</small><strong>ภาพถูกถ่ายและนำเสนออย่างไร?</strong></article><b>→</b>
+        <article class="final-step"><span>🎨</span><small>FINAL PROMPT</small><strong>รวมทุกอย่างเป็น Prompt พร้อมใช้</strong></article>
+      </div>
+    </section>
+
+    <section class="home-section recent-section"><div><p class="eyebrow">SAVE DATA · QUEST LOG</p><h2>งานล่าสุดของฉัน</h2></div><div id="recentWork" class="recent-grid"></div></section>
+  </main>
+  <script src="js/shared.js"></script><script src="js/home.js"></script>
+
+
+</body></html>

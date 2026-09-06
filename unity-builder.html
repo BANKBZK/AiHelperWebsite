@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ขยายไอเดียสั้นๆ เป็น Prompt สำหรับเขียน C# ใน Unity 6000.5.4f1">
+  <title>Unity AI Helper — AiHelperWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="unity-helper-page" data-builder="unity">
+  <nav class="site-nav" aria-label="เมนูหลัก">
+    <a class="site-brand" href="index.html"><span>AI</span> AiHelperWebsite</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="เปิดเมนู">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="prompt-builder.html">Prompt Builder</a>
+      <a href="character-builder.html">Character Builder</a>
+      <a href="scene-builder.html">Scene Builder</a>
+      <a class="active" href="unity-builder.html" aria-current="page">Unity AI Helper</a>
+    </div>
+  </nav>
+
+  <main class="lab-shell builder-page">
+    <header class="builder-hero unity-hero">
+      <div>
+        <p class="eyebrow">ROLE • CONTEXT • TECHNICAL • OUTPUT</p>
+        <h1>UNITY <span>AI HELPER</span></h1>
+        <p>รับไอเดียสั้นๆ แล้วขยายเป็น Prompt สำหรับ Unity 6000.5.4f1 ให้ AI ตัวอื่นเขียน C# และจัด GameObject ได้ทันที</p>
+      </div>
+      <div class="builder-hero-icon" aria-hidden="true">🎮</div>
+    </header>
+
+    <div class="section-toolbar prompt-library-toolbar">
+      <div>
+        <span class="eyebrow">UNITY 6 · 6000.5.4f1</span>
+        <strong>เลือกข้อกำหนดให้มากที่สุดเท่าที่โปรเจกต์ต้องการ</strong>
+      </div>
+      <div class="toolbar-actions">
+        <button id="expandAll" class="text-button" type="button">เปิดทั้งหมด</button>
+        <button id="collapseAll" class="text-button" type="button">พับทั้งหมด</button>
+      </div>
+    </div>
+
+    <div class="builder-layout">
+      <section>
+        <div id="builderSections" class="builder-sections"></div>
+        <section class="saved-panel">
+          <div><p class="eyebrow">LOCAL STORAGE</p><h2>ชุด Prompt ที่บันทึกไว้</h2></div>
+          <div class="panel-heading compact"><span>PRESETS</span><span id="presetCount" class="count-badge">0 รายการ</span></div>
+          <div class="preset-save-row">
+            <input id="presetName" type="text" placeholder="ตั้งชื่อ เช่น Dynamo Flashlight">
+            <button id="savePreset" class="button secondary" type="button">บันทึก</button>
+          </div>
+          <div id="presetList" class="preset-list"><p class="empty-state">Preset ที่บันทึกจะอยู่บนอุปกรณ์นี้</p></div>
+          <button id="resetBuilder" class="lab-button ghost" type="button" style="margin-top:16px;width:100%">รีเซ็ตเป็นค่าแนะนำ</button>
+        </section>
+        <section class="saved-panel history-card" aria-labelledby="unity-history-title">
+          <div class="panel-heading compact">
+            <div><p class="eyebrow">เมื่อคัดลอก · RECENT</p><h2 id="unity-history-title">ประวัติ Prompt</h2></div>
+            <span id="historyCount" class="count-badge">0 รายการ</span>
+          </div>
+          <div class="history-toolbar"><span>เก็บล่าสุดสูงสุด 15 รายการ</span><button id="clearHistory" class="clear-history" type="button">ล้างประวัติ</button></div>
+          <div id="historyList" class="history-list"><p class="empty-state">ประวัติจะปรากฏเมื่อคัดลอก Prompt</p></div>
+        </section>
+      </section>
+
+      <aside class="live-preview">
+        <div class="preview-card builder-preview">
+          <div class="preview-heading">
+            <div>
+              <p class="eyebrow">ENGLISH — PASTE INTO CHATGPT / CLAUDE / GEMINI</p>
+              <h2>FINAL UNITY PROMPT</h2>
+            </div>
+            <span id="saveStatus" class="save-status">บันทึกอัตโนมัติแล้ว</span>
+          </div>
+          <div id="promptLength" class="prompt-length"><strong>0</strong> ตัวอักษร · <strong>0</strong> คำ</div>
+          <div id="promptOutput" class="prompt-output empty">พิมพ์ไอเดียสั้นๆ ในขั้น 00 เพื่อสร้าง Prompt สำหรับ Unity 6000.5.4f1</div>
+          <button id="copyPrompt" class="lab-button primary full" type="button">Copy English Prompt</button>
+          <div class="bilingual-output">
+            <p class="eyebrow">ภาษาไทย — สำหรับอ่านโครงสร้าง</p>
+            <h3>พรอมต์ Unity ภาษาไทย</h3>
+            <div id="thaiPromptOutput" class="prompt-output compact empty">เมื่อมีไอเดีย ระบบจะสร้างพรอมต์ภาษาไทยสำหรับตรวจสอบ</div>
+            <button id="copyThaiPrompt" class="lab-button secondary full" type="button">คัดลอกพรอมต์ภาษาไทย</button>
+          </div>
+          <div id="builderToast" class="toast" role="status" aria-live="polite"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/shared.js"></script>
+  <script src="js/unity-options.js"></script>
+  <script src="js/unity-builder.js"></script>
+</body>
+</html>

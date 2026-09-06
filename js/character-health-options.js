@@ -1,0 +1,22 @@
+(() => {
+  'use strict';
+  window.CHARACTER_HEALTH_OPTIONS = {
+    chronicCondition: [
+      ['Heart failure','ภาวะหัวใจล้มเหลว'],['History of stroke','มีประวัติโรคหลอดเลือดสมอง'],
+      ['Chronic obstructive pulmonary disease','โรคปอดอุดกั้นเรื้อรัง'],['Pulmonary fibrosis','โรคพังผืดในปอด'],['Cystic fibrosis','โรคซิสติกไฟโบรซิส'],
+      ['Multiple sclerosis','โรคปลอกประสาทเสื่อมแข็ง'],['Parkinson disease','โรคพาร์กินสัน'],['Peripheral neuropathy','โรคเส้นประสาทส่วนปลาย'],['Cerebral palsy','ภาวะซีรีบรัลพอลซี'],['Essential tremor','ภาวะมือสั่นไม่ทราบสาเหตุ'],['Myasthenia gravis','โรคกล้ามเนื้ออ่อนแรงชนิดไมแอสทีเนีย'],
+      ['Hypothyroidism','ภาวะไทรอยด์ทำงานต่ำ'],['Hyperthyroidism','ภาวะไทรอยด์ทำงานเกิน'],
+      ['Systemic lupus erythematosus','โรคลูปัส'],['Rheumatoid arthritis','โรคข้ออักเสบรูมาตอยด์'],['Ankylosing spondylitis','โรคข้อกระดูกสันหลังอักเสบยึดติด'],['Scleroderma','โรคหนังแข็ง'],
+      ['Liver cirrhosis','โรคตับแข็ง'],['Chronic kidney failure','ภาวะไตวายเรื้อรัง'],
+      ['Iron-deficiency anemia','โรคโลหิตจางจากการขาดธาตุเหล็ก'],['Thalassemia','โรคธาลัสซีเมีย'],['Hemophilia','โรคฮีโมฟีเลีย'],['Immune thrombocytopenia','ภาวะเกล็ดเลือดต่ำจากภูมิคุ้มกัน'],
+      ['Hidradenitis suppurativa','โรคต่อมเหงื่ออักเสบเรื้อรัง'],['Rosacea','โรคผิวหน้าแดง'],['Vitiligo','โรคด่างขาว'],['Alopecia areata','โรคผมร่วงเป็นหย่อม'],['Ichthyosis','โรคผิวหนังเกล็ดปลา'],['Chronic urticaria','โรคลมพิษเรื้อรัง'],
+      ['Osteoarthritis','โรคข้อเสื่อม'],['Scoliosis','ภาวะกระดูกสันหลังคด'],['Muscular dystrophy','โรคกล้ามเนื้อเสื่อม'],['Ehlers-Danlos syndrome','กลุ่มอาการเอห์เลอร์ส-แดนลอส'],['Chronic back disorder','โรคหลังเรื้อรัง'],
+      ['Post-viral condition','ภาวะเรื้อรังหลังการติดเชื้อไวรัส'],['Post-treatment Lyme disease symptoms','อาการต่อเนื่องหลังรักษาโรคไลม์'],['Chronic pelvic pain condition','ภาวะปวดอุ้งเชิงกรานเรื้อรัง']
+    ],
+    visibleHealthImpact: [
+      ['Visible tremor','เห็นอาการสั่น'],['Joint-support splint','ใช้อุปกรณ์พยุงข้อต่อ'],['Compression garments','สวมเสื้อผ้ารัดกระชับทางการแพทย์'],['Dialysis access site','เห็นตำแหน่งเส้นเลือดสำหรับฟอกไต'],['Chemotherapy port scar','มีรอยจากช่องให้ยารักษามะเร็ง'],['Continuous glucose monitor','ติดเครื่องตรวจน้ำตาลต่อเนื่อง'],['Insulin injection marks','มีรอยฉีดอินซูลิน'],['Ostomy pouch under clothing','มีถุงหน้าท้องทางการแพทย์ใต้เสื้อผ้า'],['Visible psoriasis plaques','เห็นผื่นหนาจากโรคสะเก็ดเงิน'],['Rosacea facial redness','ใบหน้าแดงจากโรคผิวหน้าแดง'],['Patchy hair loss','ผมร่วงเป็นหย่อม'],['Reduced grip strength','แรงจับมือลดลง'],['Breathing pause during speech','ต้องหยุดหายใจระหว่างพูด'],['Balance difficulty','มีปัญหาการทรงตัว'],['Medication-related facial puffiness','ใบหน้าบวมจากผลของยา'],
+      ['Severely sleep-deprived appearance','ใบหน้าอดนอนอย่างหนัก หนังตาหนักและดูอ่อนล้า'],['Alcohol-withdrawal tremor and sweating','มือสั่นและมีเหงื่อจากภาวะถอนแอลกอฮอล์'],['Substance-related injection-site scarring','มีรอยแผลบริเวณที่เคยฉีดสาร'],['Constricted pupils with drowsy posture','รูม่านตาหดเล็กและท่าทางง่วงซึม'],['Ascites with a visibly swollen abdomen','ท้องมานทำให้หน้าท้องบวมโตอย่างเห็นได้ชัด'],['Cancer-related muscle and weight loss','กล้ามเนื้อและน้ำหนักลดจากผลของมะเร็ง'],['Cancer-treatment-related limb swelling','แขนหรือขาบวมจากผลของการรักษามะเร็ง'],['One visibly swollen leg','ขาข้างหนึ่งบวมอย่างเห็นได้ชัด'],['Long surgical scar along the leg','มีแผลผ่าตัดยาวตามแนวขา'],['Leg brace after tumor surgery','ใส่อุปกรณ์พยุงขาหลังผ่าตัดเนื้องอก'],['Localized radiation skin changes','ผิวหนังบริเวณฉายรังสีมีสีและพื้นผิวเปลี่ยนไป'],['Easy bruising visible on the skin','มีรอยช้ำบนผิวหนังเห็นได้ง่าย'],['Jaundiced skin and eyes','ผิวและตาขาวมีสีเหลือง'],['Swollen ankles and feet','ข้อเท้าและเท้าบวม']],
+    supportNeeds: [
+      ['Daily blood-glucose management','ต้องจัดการระดับน้ำตาลทุกวัน'],['Regular dialysis','ต้องฟอกไตเป็นประจำ'],['Respiratory physiotherapy','ต้องทำกายภาพบำบัดทางเดินหายใจ'],['Seizure safety plan','ต้องมีแผนความปลอดภัยเมื่อเกิดอาการชัก'],['Fall-prevention support','ต้องมีการช่วยป้องกันการหกล้ม'],['Joint-protection strategies','ต้องใช้วิธีปกป้องข้อต่อ'],['Temperature regulation support','ต้องช่วยควบคุมอุณหภูมิร่างกาย'],['Dietary medical management','ต้องควบคุมอาหารตามภาวะสุขภาพ'],['Regular infusion treatment','ต้องรับยาทางหลอดเลือดเป็นประจำ'],['Wound-care support','ต้องได้รับการดูแลแผล'],['Fatigue-aware scheduling','ต้องจัดตารางโดยคำนึงถึงความเหนื่อยล้า'],['Private medication storage','ต้องมีพื้นที่เก็บยาเป็นส่วนตัว']]
+  };
+})();

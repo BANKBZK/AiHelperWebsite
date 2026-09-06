@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="th"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="สร้าง Prompt แบบละเอียดจากคลังคำศัพท์ของ BANKBZK">
+  <title>Prompt Builder — AiHelperWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="prompt-builder-page">
+  <nav class="site-nav" aria-label="เมนูหลัก">
+    <a class="site-brand" href="index.html"><span>AI</span> AiHelperWebsite</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="เปิดเมนู">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a class="active" href="prompt-builder.html" aria-current="page">Prompt Builder</a><a href="character-builder.html">Character Builder</a><a href="scene-builder.html">Scene Builder</a>
+    </div>
+  </nav>
+
+  <main class="lab-shell builder-page prompt-lab-page">
+    <header class="builder-hero prompt-hero">
+      <div><p class="eyebrow">BUILD • ARRANGE • REFINE • COPY</p><h1>PROMPT <span>BUILDER</span></h1><p>สร้าง Prompt ทีละส่วนด้วยโครงสร้างเดียวกับ Character Builder พร้อมผลลัพธ์แบบเรียลไทม์</p></div>
+      <div class="prompt-hero-actions"><a class="social-link" href="https://www.facebook.com/people/SyntaxErr0r/61594200537782/" target="_blank" rel="noopener noreferrer"><img src="assets/syntaxerr0r-logo.png" alt=""><span>f</span> SyntaxErr0r</a><button id="largeTextToggle" class="accessibility-toggle" type="button" aria-pressed="false"><span>A+</span> ตัวอักษรใหญ่</button></div>
+      <div class="builder-hero-icon" aria-hidden="true">✨</div>
+    </header>
+
+    <div class="builder-layout prompt-builder-layout">
+      <section class="prompt-control-column" aria-label="เครื่องมือสร้าง Prompt">
+        <div class="builder-sections prompt-fixed-sections">
+          <article class="builder-section prompt-start-section learning-essential">
+            <button class="builder-section-head prompt-static-toggle" type="button" aria-expanded="true"><span>01</span><div><h2>ภาพที่ต้องการ</h2><p>Subject, action and custom details</p><small class="section-learning-level">ขั้นที่ 1 · เริ่มจากตรงนี้</small></div><b>⌄</b></button>
+            <div class="builder-section-body"><aside class="section-learning-note"><strong>คำแนะนำสำหรับผู้เรียน</strong><p>เขียนก่อนว่าใครหรืออะไร กำลังทำอะไร และอยู่ในสถานการณ์แบบไหน ใช้ประโยคสั้นและชัดเจนก่อน แล้วค่อยเพิ่มคำศัพท์ในขั้นถัดไป</p></aside><section class="subject-panel prompt-inline-panel" aria-label="รายละเอียดภาพ"><div class="prompt-language-fields thai-only-fields"><div class="language-field-group thai-fields"><p><strong>รายละเอียดภาพ</strong><small>พิมพ์ภาษาไทยได้เลย ระบบจะนำไปสร้างทั้ง Final ภาษาอังกฤษและภาษาไทย</small></p><label class="field">หัวข้อหลัก<textarea id="subjectTh" rows="2" placeholder="เช่น ผู้หญิงเกาหลีอายุประมาณ 30 ปี"></textarea></label><label class="field">การกระทำและการเคลื่อนไหว<textarea id="actionTh" rows="2" placeholder="เช่น กำลังเดินอยู่บนถนน"></textarea></label><label class="field">รายละเอียดเพิ่มเติม<textarea id="customDetailsTh" rows="2" placeholder="เช่น ผมบ๊อบสีดำ เสื้อสูทสีดำ"></textarea></label></div></div></section></div>
+          </article>
+        </div>
+
+        <div class="section-toolbar prompt-library-toolbar"><div><span class="eyebrow">คลังคำศัพท์ · PROMPT LIBRARY</span><strong>เลือกคำศัพท์เพื่อประกอบ Prompt</strong><span id="selectionSummary" class="sr-only"></span></div><div class="toolbar-actions"><button id="expandAll" class="text-button">เปิดทั้งหมด</button><button id="collapseAll" class="text-button">พับทั้งหมด</button></div></div>
+
+        <div id="sections" class="prompt-generated-sections"></div>
+
+      </section>
+
+      <aside class="live-preview prompt-live-preview" aria-label="ผลลัพธ์ Prompt">
+        <div class="preview-card builder-preview prompt-builder-preview">
+          <div class="preview-heading"><div><p class="eyebrow">REAL-TIME OUTPUT</p><h2>FINAL PROMPT</h2></div><span id="saveStatus" class="save-status">บันทึกอัตโนมัติแล้ว</span></div>
+          <div class="negative-block"><div class="preview-heading compact"><div><p class="eyebrow">สิ่งที่ไม่ต้องการ · AVOID</p><h3>NEGATIVE PROMPT</h3><small class="section-learning-level">ขั้นที่ 12 · เลือกเมื่อจำเป็น</small></div></div><aside class="section-learning-note"><strong>คำแนะนำสำหรับผู้เรียน</strong><p>เลือกเฉพาะสิ่งที่ไม่ต้องการให้เกิดในภาพ เช่น ภาพเบลอ มือผิดรูป หรือสิ่งแปลกปลอม ไม่จำเป็นต้องเลือกจำนวนมากทุกครั้ง</p></aside><div id="negativeCategory" class="negative-category"></div><div id="negativePreview" class="negative-output empty">ยังไม่ได้ระบุ</div></div>
+          <section class="final-output-block" aria-labelledby="final-output-title">
+            <div class="preview-heading"><div><p class="eyebrow">ENGLISH — PRIMARY OUTPUT</p><h2 id="final-output-title">ENGLISH PROMPT</h2></div><span class="combined-badge">PROMPT + NEGATIVE</span></div>
+            <div class="output-tools"><div class="history-controls"><button id="undoButton" class="icon-text-button" type="button" disabled="">↶ Undo</button><button id="redoButton" class="icon-text-button" type="button" disabled="">↷ Redo</button></div><div id="promptLength" class="prompt-length"><strong>0</strong> ตัวอักษร · <strong>0</strong> คำ</div></div>
+            <p id="lengthWarning" class="length-warning" role="status" hidden=""></p>
+            <div id="promptPreview" class="prompt-output empty" tabindex="0">เริ่มจากเขียน Subject หรือเลือกคำศัพท์จากคลัง</div>
+            <div class="main-actions"><button class="button primary copy-all-button" data-copy="all">Copy English Final</button><button id="clearAll" class="button ghost">ล้างทั้งหมด</button></div>
+            <div class="quick-copy"><span>คัดลอกแยก</span><button class="button secondary" data-copy="prompt">Copy Prompt</button><button class="button secondary" data-copy="negative">Copy Negative</button></div>
+            <div class="prompt-thai-output">
+              <div class="preview-heading compact"><div><p class="eyebrow">ภาษาไทย — สำหรับอ่านและตรวจสอบ</p><h3>พรอมต์ภาษาไทย</h3></div></div>
+              <div id="thaiPromptPreview" class="prompt-output empty" tabindex="0">เริ่มจากเขียนหัวข้อหลักหรือเลือกคำศัพท์จากคลัง</div>
+              <div class="main-actions thai-copy-actions"><button class="button primary" data-copy="all-th">คัดลอก Final ภาษาไทย</button><button id="clearAllThai" class="button ghost">ล้างทั้งหมด</button></div>
+            </div>
+          </section>
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="prompt-bottom-panels">
+      <section class="saved-panel prompt-saved-panel">
+        <div><p class="eyebrow">LOCAL STORAGE</p><h2>ชุด Prompt ที่บันทึกไว้</h2></div><div class="panel-heading compact"><span>PRESETS</span><span id="presetCount" class="count-badge">0 รายการ</span></div><div class="preset-save-row"><input id="presetName" type="text" placeholder="ตั้งชื่อ เช่น Beauty Portrait"><button id="savePreset" class="button secondary">บันทึก</button></div><div id="presetList" class="preset-list"><p class="empty-state">Preset ที่บันทึกจะอยู่บนอุปกรณ์นี้</p></div>
+      </section>
+
+      <section class="saved-panel history-card prompt-history-panel" aria-labelledby="history-title">
+        <div class="panel-heading compact"><div><p class="eyebrow">บันทึกเมื่อคัดลอก · RECENT</p><h2 id="history-title">ประวัติ Prompt</h2></div><span id="historyCount" class="count-badge">0 รายการ</span></div><div class="history-toolbar"><span>เก็บล่าสุดสูงสุด 15 รายการ</span><button id="clearHistory" class="clear-history" type="button">ล้างประวัติ</button></div><div id="historyList" class="history-list"><p class="empty-state">ประวัติจะปรากฏเมื่อเริ่มสร้าง Prompt</p></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/shared.js"></script><script src="js/prompt-options.js"></script><script src="js/script.js"></script>
+
+
+</body></html>

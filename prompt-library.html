@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="th"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="คลัง Prompt Template พร้อมใช้ใน AiHelperWebsite">
+  <title>Prompt Library — AiHelperWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="library-page">
+  <nav class="site-nav" aria-label="เมนูหลัก">
+    <a class="site-brand" href="index.html"><span>AI</span> AiHelperWebsite</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="เปิดเมนู">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a class="active" href="prompt-library.html" aria-current="page">Prompt Library</a><a href="prompt-builder.html">Prompt Builder</a><a href="character-builder.html">Character Builder</a><a href="scene-builder.html">Scene Builder</a>
+    </div>
+  </nav>
+  <main class="lab-shell library-shell">
+    <header class="builder-hero library-hero">
+      <div><p class="eyebrow">FIND • COPY • CREATE</p><h1>PROMPT <span>LIBRARY</span></h1><p>รวม Prompt Template พร้อมภาพตัวอย่าง สำหรับคัดลอกและนำไปใช้งานได้ทันที</p></div>
+      <div class="builder-hero-icon" aria-hidden="true">📚</div>
+    </header>
+    <section class="library-controls" aria-label="ค้นหาคลัง Prompt">
+      <label class="library-search"><span aria-hidden="true">⌕</span><input id="librarySearch" type="search" placeholder="ค้นหาชื่อหรือข้อความใน Prompt…" autocomplete="off"></label>
+    </section>
+    <section class="library-heading"><div><p class="eyebrow">READY-TO-USE TEMPLATES</p><h2>คลัง Prompt</h2></div><p id="librarySummary" aria-live="polite">0 รายการ</p></section>
+    <section id="libraryGrid" class="library-grid" aria-live="polite"></section>
+    <section class="library-resources" aria-labelledby="promptResourceTitle">
+      <div class="library-heading"><div><p class="eyebrow">CAMERA PROMPT RESOURCE</p><h2 id="promptResourceTitle">เครื่องมือช่วยเขียน Prompt</h2></div></div>
+      <a class="library-resource-card" href="https://aicameramovements.com/" target="_blank" rel="noopener noreferrer">
+        <span class="library-type-icon" aria-hidden="true">🎥</span>
+        <div><strong>AI Camera Movements</strong><p>คลังตัวอย่างการเคลื่อนกล้องและคำศัพท์สำหรับเขียน Prompt วิดีโอ</p></div>
+        <b>เปิดเว็บไซต์ ↗</b>
+      </a>
+      <a class="library-resource-card" href="https://seedanceprompts.com/" target="_blank" rel="noopener noreferrer">
+        <span class="library-type-icon" aria-hidden="true">🎬</span>
+        <div><strong>Seedance Prompts</strong><p>คลังตัวอย่าง Prompt สำหรับศึกษาโครงสร้างและพัฒนาคำสั่งสร้างวิดีโอ</p></div>
+        <b>เปิดเว็บไซต์ ↗</b>
+      </a>
+      <a class="library-resource-card" href="https://www.seedance2prompt.com/" target="_blank" rel="noopener noreferrer">
+        <span class="library-type-icon" aria-hidden="true">▶️</span>
+        <div><strong>Seedance 2 Prompt</strong><p>เครื่องมือและตัวอย่างสำหรับช่วยวางคำสั่งสร้างวิดีโอด้วย Seedance 2</p></div>
+        <b>เปิดเว็บไซต์ ↗</b>
+      </a>
+    </section>
+    <div id="libraryToast" class="library-toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="js/shared.js"></script><script src="js/prompt-library.js"></script>
+
+
+</body></html>
